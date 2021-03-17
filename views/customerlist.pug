@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    title Customers
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
+    style.
+        html {
+            font-family: Helvetica, sans-serif
+        }
+        table {
+            margin-top: 80px
+        }
+        td {
+            font-family: monospace
+        }
+        body {
+            background-color: #bfe2fd;
+        }
+        a {
+            float: right;
+            margin-top: 20px;
+            margin-bottom: 20px
+        }
+  body
+    div.container
+      div
+        a(href='/addcustomer').btn.btn-primary Add Customer
+      div
+        table.table.table-striped
+          tbody
+            thead
+              tr
+                td First Name
+                td Last Name
+                td Email
+                td Phone
+            each customer in customers
+              tr 
+                td #{customer.firstname}
+                td #{customer.lastname}
+                td #{customer.email}¨
+                td #{customer.phone}
